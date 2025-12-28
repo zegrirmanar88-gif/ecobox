@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOBOX - Smart Reusable Food Box | Keep Meals Warm, Earn Rewards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #111827;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1F7A5A;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin-left: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #F59E0B;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1F7A5A 0%, #2D9D6F 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+            background-image: url('https://via.placeholder.com/1920x600?text=ECOBOX+Hero+Image:+Sleek+Box+with+Heat+and+QR'); /* Replace with actual image */
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .cta-button {
+            background-color: #F59E0B;
+            color: #111827;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #D97706;
+        }
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section h2 {
+            font-size: 48px;
+            color: #1F7A5A;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .feature {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            transition: transform 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        .feature i {
+            font-size: 50px;
+            color: #1F7A5A;
+            margin-bottom: 20px;
+        }
+        .feature h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .flow {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .flow div {
+            background-color: #1F7A5A;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            font-weight: 600;
+        }
+        .rewards {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .rewards ul {
+            list-style: none;
+            padding: 0;
+            font-size: 20px;
+        }
+        .rewards li {
+            margin: 10px 0;
+        }
+        .market {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .market div {
+            text-align: center;
+            margin: 20px;
+        }
+        .market i {
+            font-size: 40px;
+            color: #F59E0B;
+        }
+        footer {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        footer .social {
+            margin-top: 20px;
+        }
+        footer a {
+            color: #F59E0B;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            section h2 {
+                font-size: 36px;
+            }
+            nav ul {
+                display: none; /* Simple mobile nav; can add hamburger later */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>ECOBOX</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#rewards">Rewards</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Keep Meals Warm, Earn Rewards</h1>
+        <p>Smart Reusable Food Box that Keeps Meals Warm — and Rewards Reuse</p>
+        <a href="#features" class="cta-button">Learn More</a>
+        <a href="#contact" class="cta-button">Buy Now</a>
+    </section>
+
+    <section id="problem">
+        <h2>The Problem</h2>
+        <p>Food gets cold, no microwave access, too much single-use waste, reuse feels like effort, no reward for change.</p>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-snowflake"></i>
+                <h3>Cold Food</h3>
+                <p>Meals lose heat quickly without proper storage.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-trash"></i>
+                <h3>Waste</h3>
+                <p>Excessive disposable packaging harms the environment.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-hand-paper"></i>
+                <h3>No Motivation</h3>
+                <p>Changing habits needs incentives.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution">
+        <h2>Our Solution: ECOBOX</h2>
+        <p>Warmth + Reuse + Rewards</p>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-thermometer-half"></i>
+                <h3>Controlled Heating</h3>
+                <p>Keeps food warm at 55–65°C safely.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-recycle"></i>
+                <h3>Reusable & Easy</h3>
+                <p>Durable, easy-to-clean design.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-qrcode"></i>
+                <h3>QR/Barcode ID</h3>
+                <p>Links to app for rewards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="flow">
+            <div>Scan QR/Barcode</div>
+            <div>→ Smart Link Opens</div>
+            <div>→ App or Website</div>
+            <div>→ Link Box to Account</div>
+        </div>
+        <p>Each ECOBOX has a unique code. Scan to connect and start earning EcoPoints.</p>
+    </section>
+
+    <section id="rewards" class="rewards">
+        <h2>EcoPoints Rewards</h2>
+        <ul>
+            <li>Register scan: +50 points</li>
+            <li>Daily reuse: +10 points</li>
+            <li>Weekly streak bonus</li>
+            <li>Redeem for coupons/discounts</li>
+            <li>Verified usage events</li>
+        </ul>
+        <p>Build habits with rewards that matter.</p>
+    </section>
+
+    <section id="features">
+        <h2>Engineering Features</h2>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-microchip"></i>
+                <h3>ESP32 Control</h3>
+                <p>Sensors and firmware for safe heating.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-battery-half"></i>
+                <h3>Battery & BMS</h3>
+                <p>Long-lasting power with management.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-wifi"></i>
+                <h3>Connectivity</h3>
+                <p>Bluetooth/Wi-Fi sync with app.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="market">
+        <h2>Target Market</h2>
+        <div class="market">
+            <div>
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Students</h3>
+                <p>Campus life made easier.</p>
+            </div>
+            <div>
+                <i class="fas fa-briefcase"></i>
+                <h3>Office Workers</h3>
+                <p>Warm lunches at work.</p>
+            </div>
+            <div>
+                <i class="fas fa-train"></i>
+                <h3>Commuters</h3>
+                <p>On-the-go convenience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Ready to reduce waste and enjoy warm meals? Contact us for partnerships or purchases.</p>
+        <a href="mailto:info@ecobox.com" class="cta-button">Email Us</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 ECOBOX. All rights reserved.</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
